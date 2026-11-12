@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b1c">
+  <title>GIFT UP — Telegram Gifts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home"><span class="brand-mark">G</span><span>GIFT<span class="brand-accent">UP</span><small>GIFTS MARKET</small></span></a>
+    <nav class="main-nav">
+      <button class="nav-link active" data-page="home">Главная</button>
+      <button class="nav-link" data-page="cases">Кейсы</button>
+      <button class="nav-link" data-page="upgrade">Апгрейд</button>
+      <button class="nav-link" data-page="inventory">Инвентарь</button>
+    </nav>
+    <div class="top-actions">
+      <div class="balance-pill"><span class="coin">✦</span><span id="headerBalance">3 000</span><small>FS</small></div>
+      <button class="profile-button" data-page="profile"><span class="avatar">U</span><span class="profile-label">Профиль</span></button>
+      <button class="mobile-menu" id="mobileMenu" aria-label="Открыть меню">☰</button>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="demo-strip"><span class="pulse-dot"></span> ДЕМО-РЕЖИМ <span>Все операции на сайте тестовые — реальные переводы пока не подключены</span></div>
+
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> THE WORLD OF TELEGRAM GIFTS</div>
+          <h1>ОТКРЫВАЙ.<br><em>УЛУЧШАЙ.</em><br>ЗАБИРАЙ.</h1>
+          <p>Открывай кейсы, собирай коллекцию Telegram-подарков и пробуй удачу в апгрейде.</p>
+          <div class="hero-buttons"><button class="btn btn-primary" data-page="cases">Открыть кейсы <b>↗</b></button><button class="btn btn-ghost" data-page="upgrade">Попробовать апгрейд</button></div>
+          <div class="hero-stats"><div><strong>12 480+</strong><small>подарков открыто</small></div><i></i><div><strong>2 340</strong><small>участников</small></div><i></i><div><strong>24/7</strong><small>доступ к кейсам</small></div></div>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-gift gift-main"><div class="gift-ribbon"></div><div class="gift-bow">⌁</div><div class="gift-star">✦</div></div>
+          <div class="float-card float-left"><span class="mini-gem">◆</span><div><b>Rare drop</b><small>Новый подарок</small></div></div>
+          <div class="float-card float-right"><span class="mini-star">✦</span><div><b>+ 850 FS</b><small>Продажа подарка</small></div></div>
+          <div class="art-caption">YOUR NEXT GIFT IS WAITING</div>
+        </div>
+      </div>
+
+      <div class="section-heading"><div><div class="eyebrow">CHOOSE YOUR DROP</div><h2>Популярные кейсы</h2></div><button class="text-link" data-page="cases">Все кейсы <span>→</span></button></div>
+      <div class="case-grid">
+        <article class="case-card case-violet"><div class="case-tag">ПОПУЛЯРНОЕ</div><div class="case-visual"><div class="case-box">✦</div><span class="spark s1">✧</span><span class="spark s2">✦</span></div><div class="case-info"><div><h3>Violet Box</h3><p>Подарки с характером</p></div><strong>150 <small>FS</small></strong></div><button class="btn btn-card" data-open-case="Violet Box" data-cost="150">Открыть кейс <span>↗</span></button></article>
+        <article class="case-card case-blue"><div class="case-tag">ВЫГОДНЫЙ</div><div class="case-visual"><div class="case-box">◇</div><span class="spark s1">✧</span><span class="spark s2">✦</span></div><div class="case-info"><div><h3>Blue Dream</h3><p>Редкие находки</p></div><strong>350 <small>FS</small></strong></div><button class="btn btn-card" data-open-case="Blue Dream" data-cost="350">Открыть кейс <span>↗</span></button></article>
+        <article class="case-card case-gold"><div class="case-tag">ПРЕМИУМ</div><div class="case-visual"><div class="case-box">♛</div><span class="spark s1">✧</span><span class="spark s2">✦</span></div><div class="case-info"><div><h3>Golden Touch</h3><p>Максимум эмоций</p></div><strong>900 <small>FS</small></strong></div><button class="btn btn-card" data-open-case="Golden Touch" data-cost="900">Открыть кейс <span>↗</span></button></article>
+      </div>
+      <div class="daily-banner"><div class="daily-icon">🎁</div><div><b>Твой бесплатный кейс</b><p>Заглядывай каждый день за новым подарком</p></div><div class="daily-timer" id="dailyTimer">23:59:59</div><button class="btn btn-primary" id="dailyOpen">Забрать</button></div>
+    </section>
+
+    <section class="page" id="page-cases">
+      <div class="page-heading"><div class="eyebrow">OPEN YOUR LUCK</div><h1>Кейсы</h1><p>Выбирай кейс и получай случайный подарок из коллекции.</p></div>
+      <div class="case-grid large">
+        <article class="case-card case-violet"><div class="case-tag">ПОПУЛЯРНОЕ</div><div class="case-visual"><div class="case-box">✦</div><span class="spark s1">✧</span><span class="spark s2">✦</span></div><div class="case-info"><div><h3>Violet Box</h3><p>Базовая коллекция</p></div><strong>150 <small>FS</small></strong></div><button class="btn btn-card" data-open-case="Violet Box" data-cost="150">Открыть кейс <span>↗</span></button></article>
+        <article class="case-card case-blue"><div class="case-tag">ВЫГОДНЫЙ</div><div class="case-visual"><div class="case-box">◇</div><span class="spark s1">✧</span><span class="spark s2">✦</span></div><div class="case-info"><div><h3>Blue Dream</h3><p>Редкие находки</p></div><strong>350 <small>FS</small></strong></div><button class="btn btn-card" data-open-case="Blue Dream" data-cost="350">Открыть кейс <span>↗</span></button></article>
+        <article class="case-card case-gold"><div class="case-tag">ПРЕМИУМ</div><div class="case-visual"><div class="case-box">♛</div><span class="spark s1">✧</span><span class="spark s2">✦</span></div><div class="case-info"><div><h3>Golden Touch</h3><p>Премиум коллекция</p></div><strong>900 <small>FS</small></strong></div><button class="btn btn-card" data-open-case="Golden Touch" data-cost="900">Открыть кейс <span>↗</span></button></article>
+      </div>
+    </section>
+
+    <section class="page" id="page-upgrade">
+      <div class="page-heading"><div class="eyebrow">LEVEL UP YOUR COLLECTION</div><h1>Апгрейд подарков</h1><p>Попробуй обменять свой подарок на более ценный. Результат демонстрационный.</p></div>
+      <div class="upgrade-panel">
+        <div class="upgrade-slot"><span class="slot-label">ТВОЙ ПОДАРОК</span><div class="slot-art source-art">🌹</div><h3 id="sourceName">Rose</h3><p id="sourcePrice">250 FS</p><select id="sourceSelect" hidden><option value="Rose|250|🌹">Rose — 250 FS</option><option value="Heart|400|💝">Heart — 400 FS</option><option value="Diamond|650|💎">Diamond — 650 FS</option></select></div>
+        <div class="upgrade-center"><div class="chance-dial" id="upgradeArrow" aria-label="Индикатор шанса апгрейда"><div class="chance-ring"><strong id="chanceValue">25%</strong><small>ШАНС</small></div><div class="pointer-orbit"><span class="upgrade-pointer"></span></div></div><button class="btn btn-primary" id="upgradeButton">Испытать удачу</button></div>
+        <div class="upgrade-slot"><span class="slot-label">ЖЕЛАЕМЫЙ ПОДАРОК</span><div class="slot-art target-art">💎</div><h3 id="targetName">Diamond</h3><p id="targetPrice">1 000 FS</p><select id="targetSelect" hidden><option value="Diamond|1000|💎">Diamond — 1 000 FS</option><option value="Rocket|1600|🚀">Rocket — 1 600 FS</option><option value="Trophy|2500|🏆">Trophy — 2 500 FS</option></select></div>
+      </div>
+      <div class="upgrade-inventory"><div class="section-heading"><div><div class="eyebrow">CHOOSE FROM YOUR COLLECTION</div><h2>Твои подарки для апгрейда</h2></div><span class="muted">Выбери подарок, который отдаёшь</span></div><div class="upgrade-pick-grid" id="upgradePickGrid"></div></div><div class="upgrade-inventory target-catalog"><div class="section-heading"><div><div class="eyebrow">NFT GIFT CATALOG</div><h2>Каталог желаемых подарков</h2></div><span class="muted">Выбери цель апгрейда · обычные и коллекционные NFT</span></div><div class="catalog-filters"><button class="catalog-filter active" data-filter="all">Все</button><button class="catalog-filter" data-filter="обычный">Обычные</button><button class="catalog-filter" data-filter="редкий">Редкие</button><button class="catalog-filter" data-filter="nft">NFT-подарки</button></div><div class="upgrade-pick-grid catalog-grid" id="targetPickGrid"></div></div>
+      <p class="upgrade-note">Шанс победы = стоимость твоего подарка ÷ стоимость желаемого подарка × 100%. Например, подарок за 500 FS на цель за 2 000 FS даёт ровно 25% вероятности. Каталог содержит демонстрационные карточки, не реальные NFT-предметы Telegram.</p>
+    </section>
+
+    <section class="page" id="page-inventory">
+      <div class="page-heading"><div class="eyebrow">YOUR COLLECTION</div><h1>Инвентарь</h1><p>Твои подарки и их демонстрационная стоимость.</p></div>
+      <div class="inventory-summary"><div><small>ПРЕДМЕТОВ</small><b id="itemCount">3</b></div><div><small>СТОИМОСТЬ</small><b id="inventoryValue">1 300 FS</b></div><div><small>БАЛАНС</small><b id="inventoryBalance">3 000 FS</b></div></div>
+      <div class="inventory-grid" id="inventoryGrid"></div>
+    </section>
+
+    <section class="page" id="page-profile">
+      <div class="page-heading"><div class="eyebrow">YOUR ACCOUNT</div><h1>Профиль</h1><p>Управляй балансом и смотри историю операций.</p></div>
+      <div class="profile-layout"><div class="profile-card"><div class="profile-avatar">U</div><h2>Пользователь</h2><span class="muted">@giftup_user</span><div class="profile-balance"><small>ТВОЙ БАЛАНС</small><b id="profileBalance">3 000 <span>FS</span></b></div><button class="btn btn-primary" id="topupButton">Пополнить баланс</button></div>
+        <div class="profile-actions"><div class="action-card"><div class="action-icon">🎁</div><div><h3>Мои подарки</h3><p>Просматривай коллекцию и продавай подарки прямо из профиля.</p></div><button class="btn btn-ghost" data-page="inventory">Открыть</button></div><div class="profile-gifts-mini" id="profileGiftGrid"></div><div class="action-card"><div class="action-icon">🔗</div><div><h3>Регистрация FlexGram</h3><p>Подключение настоящего аккаунта потребует официальной авторизации FlexGram.</p></div><button class="btn btn-ghost" id="flexgramAuthButton">Подключить</button></div><div class="action-card"><div class="action-icon">↗</div><div><h3>Вывод FlexStar</h3><p>Минимальная сумма вывода — 200 FS. Реальный перевод пока не подключён.</p></div><button class="btn btn-ghost" id="withdrawButton">Вывести</button></div><div class="action-card"><div class="action-icon">↻</div><div><h3>История операций</h3><p id="historyText">Пока нет операций в этой сессии.</p></div></div><div class="notice-card">🔒 <span>Баланс в этой версии демонстрационный. Не используй его как реальный кошелёк.</span></div></div>
+      </div>
+    </section>
+    <footer><a class="brand footer-brand" href="#"><span class="brand-mark">G</span><span>GIFT<span class="brand-accent">UP</span><small>GIFTS MARKET</small></span></a><span>© 2026 GIFT UP · DEMO PROJECT</span><span>Сделано для коллекционеров подарков</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="modal"><div class="modal"><button class="modal-close" id="modalClose">×</button><div class="modal-symbol" id="modalSymbol">🎁</div><div class="eyebrow" id="modalEyebrow">GIFT UP</div><h2 id="modalTitle">Поздравляем!</h2><p id="modalText">Ты получил новый подарок.</p><button class="btn btn-primary" id="modalOk">Отлично</button></div></div>
+  <nav class="mobile-dock" aria-label="Основная навигация">
+    <button class="dock-link active" data-page="home"><span>⌂</span><small>Главная</small></button>
+    <button class="dock-link" data-page="cases"><span>▣</span><small>Кейсы</small></button>
+    <button class="dock-link" data-page="upgrade"><span>⇄</span><small>Апгрейд</small></button>
+    <button class="dock-link" data-page="inventory"><span>◇</span><small>Подарки</small></button>
+    <button class="dock-link" data-page="profile"><span>●</span><small>Профиль</small></button>
+  </nav>
+  <div class="toast" id="toast"></div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
